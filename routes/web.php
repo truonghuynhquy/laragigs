@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [ListingController::class, 'index']);
+
+Route::get('/listings/{listing}', [ListingController::class, 'show']);
 // Route::get('/', function () {
 //     return view('listings', [
 //         'heading' => 'Latest Listings',
@@ -24,8 +26,8 @@ Route::get('/', [ListingController::class, 'index']);
 //     ]);
 // });
 
-Route::get('/listings/{id}', function ($id) {
-    return view('listing', [
-        'listing' => Listing::find($id)
-    ]);
-});
+// Route::get('/listings/{id}', function ($id) {
+//     return view('listing', [
+//         'listing' => Listing::find($id)
+//     ]);
+// });

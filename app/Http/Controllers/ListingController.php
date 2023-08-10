@@ -36,9 +36,11 @@ class ListingController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Listing $listing)
     {
-        //
+        return view('listings.show', [
+            'listing' => $listing
+        ]);
     }
 
     /**
